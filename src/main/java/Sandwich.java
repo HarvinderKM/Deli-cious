@@ -1,13 +1,15 @@
+import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.List;
-
+ //create constructor, getters, setters
 public class Sandwich {
-    int size;
-    List<String>regularToppingsList = new ArrayList<>();
-    List<String>premiumToppingsList = new ArrayList<>();
+    static int size;
+    List<String>regularToppingsList = new ArrayList<>(); //string array list for regular toppings
+    List<String>premiumToppingsList = new ArrayList<>(); // string array list for premium toppings
 
-    String breadType;
+    static String breadType;
 
+    //below are constructors
     public Sandwich(int size, List<String> regularToppingsList, List<String> premiumToppingsList, String breadType) {
         this.size = size;
         this.regularToppingsList = regularToppingsList;
@@ -15,8 +17,24 @@ public class Sandwich {
         this.breadType = breadType;
     }
 
-    public int getSize() {
+    //adding a sandwich method
+    public static List<Sandwich> sandwichList = new ArrayList<>();
+    public static void addSandwich(){
+        System.out.println("Sandwich size options: 4in, 8in, or 12in");
+        int size = Integer.parseInt(OrderScreen.getAnswer("size: "));
+        System.out.println(size);
+
+        System.out.println("Sandwich bread options: white, rye, wheat, or a wrap");
+        String bread = OrderScreen.getAnswer("size: ");
+        System.out.println(bread);
+
+
+       // sandwichList.add(sandwich);
+    }
+
+     public int getSize() {
         return size;
+
     }
 
     public void setSize(int size) {
@@ -39,7 +57,7 @@ public class Sandwich {
         this.premiumToppingsList = premiumToppingsList;
     }
 
-    public String getBreadType() {
+    public static String getBreadType() {
         return breadType;
     }
 

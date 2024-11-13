@@ -13,7 +13,8 @@ public static void orderScreen (){
         // String answer = getAnswer("--> "); //call getanswer method and put in arrow to type,
         switch (getAnswer("--> ")){ // switch statement for order screen
             case "1":
-                System.out.println("Add Sandwich"); //new order
+                System.out.println("Add Sandwich");//new order
+                Sandwich.addSandwich();
                 break;
             case "2":
                 System.out.println("Add Drink"); //new order
