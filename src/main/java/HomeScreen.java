@@ -10,7 +10,8 @@ public class HomeScreen {
            // String answer = getAnswer("--> "); //call getanswer method and put in arrow to type,
             switch (getAnswer("--> ")){
                 case "1":
-                    System.out.println("Making a New Order"); //new order
+                    System.out.println("Making a New Order");//new order
+                    OrderScreen.orderScreen(); //calls the order screen
                     break;
                 case "0":
                     System.exit(0); //exits program completely

@@ -8,10 +8,10 @@ public class OrderScreen {
     //o 4) Checkout
     //o 0) Cancel Order - delete the order and go back to the home page
 public static void orderScreen (){
-    System.out.println("(1)Add Sandwich \n(2) Add Drink \n (3)Add Chips \n (4)Checkout \n (5) Cancel Order");
+    System.out.println("(1)Add Sandwich\n(2)Add Drink\n(3)Add Chips\n(4)Checkout\n(5)Cancel Order\n(0)Go Back");
     do {
         // String answer = getAnswer("--> "); //call getanswer method and put in arrow to type,
-        switch (getAnswer("--> ")){
+        switch (getAnswer("--> ")){ // switch statement for order screen
             case "1":
                 System.out.println("Add Sandwich"); //new order
                 break;
@@ -25,7 +25,9 @@ public static void orderScreen (){
                 System.out.println("Add Checkout"); //new order
                 break;
             case "5":
-                System.out.println("Add Cancel Order"); //new order
+                System.out.println("Canceled Order"); //new order
+                break;
+            case "0":
                 System.exit(0); //exits program completely
                 break;
             default:
