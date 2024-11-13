@@ -29,22 +29,34 @@ public class MAIN {
     }
 
     public void personalizeSandwich(){
-        System.out.println("cheese");
-        System.out.println("Sauce");
-        System.out.println("toppings");
+        System.out.println("Add Cheese --> 1");
+        System.out.println("Add Sauces --> 2");
+        System.out.println("Vegtables --> ");
         System.out.println("Toasted - Y or N");
         System.out.println("Return to Main Menu ");
 
+        int option = scanner.nextInt(); // takes user input
+        scanner.nextLine(); // consumes leftover line
 
-
-
+        switch (option){
+            case 1:
+                break;
+            case 2:
+                break;
+            case 3:
+                break;
+            case 4:
+                break;
+            default:
+                System.out.println("Pick a Valid Number");
+        }
     }
 
     // create method for keeping the system running
     public void run() {
         boolean running = true; //var will control the loop
         while (running) { // loop continues until running is set to false
-            displayMainMenu(); //create a display main menu method  - this will display the main menu to the user every time it loops
+            displayMainMenu(); //display main menu method  - this will display the main menu to the user every time it loops
 
             int choice = scanner.nextInt();// users menu choice
             scanner.nextLine(); //clears extra characters
