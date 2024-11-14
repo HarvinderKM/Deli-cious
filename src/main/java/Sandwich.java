@@ -38,7 +38,6 @@ public class Sandwich {
             break;
             }
         }
-        System.out.println(premiumToppingsList);
         System.out.println("Cheese Options: American, provolone, cheddar, or swiss");
         for (int i = 1;i < 4; i++){ //can ask for up to 3 cheeses if they want
             String cheese = OrderScreen.getAnswer("cheese: ");
@@ -49,7 +48,19 @@ public class Sandwich {
                 break;
             }
         }
-       // sandwichList.add(sandwich);
+        System.out.println(premiumToppingsList);
+        System.out.println("Regular toppings: lettuce, peppers, onions, tomatoes, jalepenos, cucumbers, pickles, guacamole, and mushrooms");
+        for (int i = 1;i < 9; i++){ //can ask for up to 9 toppings if they want
+            String regularToppings = OrderScreen.getAnswer("regular toppings: ");
+            if (!regularToppings.isEmpty()){
+                regularToppingsList.add(regularToppings);
+                System.out.println(regularToppings);
+            } if (regularToppings.equalsIgnoreCase("no")){
+                break;
+            }
+        }
+        System.out.println(regularToppingsList);
+        // sandwichList.add(sandwich);
     }
 
      public int getSize() {
