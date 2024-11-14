@@ -31,20 +31,20 @@ public class Sandwich {
         System.out.println("Protein options: Steak, ham, Salami, roast beef, chicken, bacon");
         for (int i = 1;i < 5; i++){ //can ask for up to 6 meats if they want
             String meat = OrderScreen.getAnswer("meat: ");
-            if (!meat.isEmpty()){
+            if (!meat.isEmpty() && !meat.equalsIgnoreCase("no")&& !meat.equals(" ")){
                 premiumToppingsList.add(meat);
                 System.out.println(meat);
-            } if (meat.equalsIgnoreCase("no")){
+            } if (meat.equalsIgnoreCase("no")|| meat.equals(" ")){
             break;
             }
         }
         System.out.println("Cheese Options: American, provolone, cheddar, or swiss");
         for (int i = 1;i < 4; i++){ //can ask for up to 3 cheeses if they want
             String cheese = OrderScreen.getAnswer("cheese: ");
-            if (!cheese.isEmpty()){
+            if (!cheese.isEmpty() && !cheese.equalsIgnoreCase("no")&& !cheese.equals(" ")){
                 premiumToppingsList.add(cheese);
                 System.out.println(cheese);
-            } if (cheese.equalsIgnoreCase("no")){
+            } if (cheese.equalsIgnoreCase("no")|| cheese.equals(" ")){
                 break;
             }
         }
@@ -52,10 +52,10 @@ public class Sandwich {
         System.out.println("Regular toppings: lettuce, peppers, onions, tomatoes, jalepenos, cucumbers, pickles, guacamole, and mushrooms");
         for (int i = 1;i < 9; i++){ //can ask for up to 9 toppings if they want
             String regularToppings = OrderScreen.getAnswer("regular toppings: ");
-            if (!regularToppings.isEmpty()){
+            if (!regularToppings.isEmpty() && !regularToppings.equalsIgnoreCase("no")&& !regularToppings.equals(" ")){
                 regularToppingsList.add(regularToppings);
                 System.out.println(regularToppings);
-            } if (regularToppings.equalsIgnoreCase("no")){
+            } if (regularToppings.equalsIgnoreCase("no")|| regularToppings.equals(" ")){
                 break;
             }
         }

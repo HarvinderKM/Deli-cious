@@ -15,6 +15,7 @@ public static void orderScreen (){
             case "1":
                 System.out.println("Add Sandwich");//new order
                 Sandwich.addSandwich();
+                System.out.println("\n (1)Add Sandwich\n(2)Add Drink\n(3)Add Chips\n(4)Checkout\n(5)Cancel Order\n(0)Go Back");
                 break;
             case "2":
                 System.out.println("Add Drink"); //new order
