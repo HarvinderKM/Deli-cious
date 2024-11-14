@@ -4,8 +4,8 @@ import java.util.List;
  //create constructor, getters, setters
 public class Sandwich {
     static int size;
-    List<String>regularToppingsList = new ArrayList<>(); //string array list for regular toppings
-    List<String>premiumToppingsList = new ArrayList<>(); // string array list for premium toppings
+    public static List<String>regularToppingsList = new ArrayList<>(); //string array list for regular toppings
+    public static List<String>premiumToppingsList = new ArrayList<>(); // string array list for premium toppings
 
     static String breadType;
 
@@ -25,10 +25,30 @@ public class Sandwich {
         System.out.println(size);
 
         System.out.println("Sandwich bread options: white, rye, wheat, or a wrap");
-        String bread = OrderScreen.getAnswer("size: ");
+        String bread = OrderScreen.getAnswer("bread: ");
         System.out.println(bread);
 
-
+        System.out.println("Protein options: Steak, ham, Salami, roast beef, chicken, bacon");
+        for (int i = 1;i < 5; i++){ //can ask for up to 6 meats if they want
+            String meat = OrderScreen.getAnswer("meat: ");
+            if (!meat.isEmpty()){
+                premiumToppingsList.add(meat);
+                System.out.println(meat);
+            } if (meat.equalsIgnoreCase("no")){
+            break;
+            }
+        }
+        System.out.println(premiumToppingsList);
+        System.out.println("Cheese Options: American, provolone, cheddar, or swiss");
+        for (int i = 1;i < 4; i++){ //can ask for up to 3 cheeses if they want
+            String cheese = OrderScreen.getAnswer("cheese: ");
+            if (!cheese.isEmpty()){
+                premiumToppingsList.add(cheese);
+                System.out.println(cheese);
+            } if (cheese.equalsIgnoreCase("no")){
+                break;
+            }
+        }
        // sandwichList.add(sandwich);
     }
 
