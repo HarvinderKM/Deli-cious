@@ -18,19 +18,19 @@ public static void orderScreen (){
                 System.out.println("\n(1)Add Sandwich\n(2)Add Drink\n(3)Add Chips\n(4)Checkout\n(5)Cancel Order\n(0)Go Back");
                 break;
             case "2":
-                System.out.println("Add Drink");//new order
+                System.out.println("Add Drink");//add a drink
                 System.out.println("\n(1)Add Sandwich\n(2)Add Drink\n(3)Add Chips\n(4)Checkout\n(5)Cancel Order\n(0)Go Back");
                 break;
             case "3":
-                System.out.println("Add Chips"); //new order
+                System.out.println("Add Chips"); //add chips
                 System.out.println("\n(1)Add Sandwich\n(2)Add Drink\n(3)Add Chips\n(4)Checkout\n(5)Cancel Order\n(0)Go Back");
                 break;
             case "4":
-                System.out.println("Add Checkout"); //new order
+                System.out.println("Add Checkout"); //checkout
                 System.out.println("\n(1)Add Sandwich\n(2)Add Drink\n(3)Add Chips\n(4)Checkout\n(5)Cancel Order\n(0)Go Back");
                 break;
             case "5":
-                System.out.println("Canceled Order"); //new order
+                System.out.println("Canceled Order"); //cancelled Order
                 System.out.println("\n(1)Add Sandwich\n(2)Add Drink\n(3)Add Chips\n(4)Checkout\n(5)Cancel Order\n(0)Go Back");
                 break;
             case "0":
