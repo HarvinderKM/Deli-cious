@@ -2,12 +2,13 @@ import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.List;
  //create constructor, getters, setters
-public class Sandwich {
+public class Sandwich extends Order { //inherits from order class (extends)
     private  int size;
     private  List<String>regularToppingsList; //string array list for regular toppings
     private  List<String>premiumToppingsList; // string array list for premium toppings
     private  boolean toasted = false;
     private  String breadType;
+    public static double sandwichPrice = 0;
 
     //below are constructors
 
@@ -82,10 +83,68 @@ public class Sandwich {
             toast1=true;
         }
 
-        //
-        sandwichList.add(new Sandwich(size,customerRegularToppings, customerPremiumToppings,bread,toast1));
+        //add sandwich to list below
+        Sandwich sandwich = new Sandwich(size,customerRegularToppings, customerPremiumToppings,bread,toast1);
+        sandwichList.add(sandwich);
+        OrderScreen.orderList.add(sandwichList);
         System.out.println(sandwichList);
+        System.out.println(OrderScreen.orderList);
+        System.out.println(getSandwichPrice());
+
     }
+    //new method returns double
+     public static double getSandwichPrice(){
+         double total = 0;
+         List<String> regularToppings = sandwichList.get(0).getRegularToppingsList();
+         List<String> premiumToppings = sandwichList.get(0).getPremiumToppingsList();
+         int size = sandwichList.get(0).getSize();
+         String bread = sandwichList.get(0).getBreadType();
+         boolean toasted = sandwichList.get(0).isToasted();
+
+         if (size == 4) {
+             for (String topping : premiumToppings){
+                 if (premiumToppings.contains("steak")||premiumToppings.contains("ham")||premiumToppings.contains("salami")
+                         ||premiumToppings.contains("roast beef")||premiumToppings.contains("chicken")||premiumToppings.contains("bacon")){
+                     total+= 1.0;
+                 }
+                 if (premiumToppings.contains("american")||premiumToppings.contains("provolone")||premiumToppings.contains("cheddar")
+                         ||premiumToppings.contains("swiss")) {
+                     total += .75;
+                 }
+
+             }
+         }
+         if (size == 8) {
+             for (String topping : premiumToppings){
+                 if (premiumToppings.contains("steak")||premiumToppings.contains("ham")||premiumToppings.contains("salami")
+                         ||premiumToppings.contains("roast beef")||premiumToppings.contains("chicken")||premiumToppings.contains("bacon")){
+                     total+= 2.0;
+                 }
+                 if (premiumToppings.contains("american")||premiumToppings.contains("provolone")||premiumToppings.contains("cheddar")
+                         ||premiumToppings.contains("swiss")) {
+                     total += 1.50;
+                 }
+
+             }
+         }
+         if (size == 12) {
+             for (String topping : premiumToppings){
+                 if (premiumToppings.contains("steak")||premiumToppings.contains("ham")||premiumToppings.contains("salami")
+                         ||premiumToppings.contains("roast beef")||premiumToppings.contains("chicken")||premiumToppings.contains("bacon")){
+                     total+= 3.0;
+                 }
+                 if (premiumToppings.contains("american")||premiumToppings.contains("provolone")||premiumToppings.contains("cheddar")
+                         ||premiumToppings.contains("swiss")) {
+                     total += 2.25;
+                 }
+
+             }
+         }
+
+
+        return total;
+     }
+
 //getters and setters
      public int getSize() {
          return size;

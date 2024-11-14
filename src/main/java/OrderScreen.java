@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
 import java.util.Scanner;
 
 public class OrderScreen {
@@ -7,6 +10,7 @@ public class OrderScreen {
     //o 3) Add Chips
     //o 4) Checkout
     //o 0) Cancel Order - delete the order and go back to the home page
+    public static List<Object> orderList = new ArrayList<>();
 public static void orderScreen (){
     System.out.println("(1)Add Sandwich\n(2)Add Drink\n(3)Add Chips\n(4)Checkout\n(5)Cancel Order\n(0)Go Back");
     do {
