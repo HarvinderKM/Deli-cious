@@ -1,10 +1,11 @@
+import java.io.IOException;
 import java.util.Scanner;
 
 public class HomeScreen {
     //application should continue to run until user chooses to exit
     // 1) New Order
     // 2) Exit
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         System.out.println("(1) New Order \n(0) exit");
         do {
            // String answer = getAnswer("--> "); //call getanswer method and put in arrow to type,

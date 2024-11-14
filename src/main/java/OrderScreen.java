@@ -1,3 +1,4 @@
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -11,7 +12,7 @@ public class OrderScreen {
     //o 4) Checkout
     //o 0) Cancel Order - delete the order and go back to the home page
     public static List<Object> orderList = new ArrayList<>();
-public static void orderScreen (){
+public static void orderScreen () throws IOException {
     System.out.println("(1)Add Sandwich\n(2)Add Drink\n(3)Add Chips\n(4)Checkout\n(5)Cancel Order\n(0)Go Back");
     do {
         // String answer = getAnswer("--> "); //call getanswer method and put in arrow to type,
@@ -33,6 +34,7 @@ public static void orderScreen (){
                 break;
             case "4":
                 System.out.println("Add Checkout"); //checkout
+                CheckoutScreen.checkout();
                 System.out.println("\n(1)Add Sandwich\n(2)Add Drink\n(3)Add Chips\n(4)Checkout\n(5)Cancel Order\n(0)Go Back");
                 break;
             case "5":
