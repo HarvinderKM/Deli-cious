@@ -3,23 +3,24 @@ import java.util.ArrayList;
 import java.util.List;
  //create constructor, getters, setters
 public class Sandwich {
-    static int size;
-    public static List<String>regularToppingsList = new ArrayList<>(); //string array list for regular toppings
-    public static List<String>premiumToppingsList = new ArrayList<>(); // string array list for premium toppings
-
+    public static int size;
+    public static List<String>regularToppingsList; //string array list for regular toppings
+    public static List<String>premiumToppingsList; // string array list for premium toppings
+    public static boolean toasted = false;
     static String breadType;
 
     //below are constructors
-    public Sandwich(int size, List<String> regularToppingsList, List<String> premiumToppingsList, String breadType) {
-        this.size = size;
-        this.regularToppingsList = regularToppingsList;
-        this.premiumToppingsList = premiumToppingsList;
-        this.breadType = breadType;
-    }
 
-    //adding a sandwich method
+     //adding a sandwich method
     public static List<Sandwich> sandwichList = new ArrayList<>();
-    public static void addSandwich(){
+
+     public Sandwich(int size, List<String> regularToppingsList, List<String> premiumToppingsList, String bread, boolean toasted) {
+         this.size = size;
+         this.regularToppingsList = regularToppingsList;
+         this.premiumToppingsList =
+     }
+
+     public static void addSandwich(){
         System.out.println("Sandwich size options: 4in, 8in, or 12in");
         int size = Integer.parseInt(OrderScreen.getAnswer("size: "));
         System.out.println(size);
@@ -60,7 +61,23 @@ public class Sandwich {
             }
         }
         System.out.println(regularToppingsList);
-        // sandwichList.add(sandwich);
+        System.out.println("Which Sauce would you like? Mayo, Mustard, Ketchup, ranch,thousand islands, au jus, or sauce");
+        for (int i = 1;i < 7; i++){ //can ask for up to 5 sauces if they want
+            String regularToppings = OrderScreen.getAnswer("sauces: ");
+            if (!regularToppings.isEmpty() && !regularToppings.equalsIgnoreCase("no")&& !regularToppings.equals(" ")){
+                regularToppingsList.add(regularToppings);
+                System.out.println(regularToppings);
+            } if (regularToppings.equalsIgnoreCase("no")|| regularToppings.equals(" ")){
+                break;
+            }
+        }
+        String toast = OrderScreen.getAnswer("Want it toasted? (y or n): ");
+        if (toast.equalsIgnoreCase("y")){
+            toasted=true;
+        }
+
+        sandwichList.add(new Sandwich(size,regularToppingsList, premiumToppingsList,bread,toasted));
+        System.out.println(sandwichList);
     }
 
      public int getSize() {
@@ -69,7 +86,7 @@ public class Sandwich {
     }
 
     public void setSize(int size) {
-        this.size = size;
+        Sandwich.size = size;
     }
 
     public List<String> getRegularToppingsList() {
@@ -77,7 +94,7 @@ public class Sandwich {
     }
 
     public void setRegularToppingsList(List<String> regularToppingsList) {
-        this.regularToppingsList = regularToppingsList;
+        Sandwich.regularToppingsList = regularToppingsList;
     }
 
     public List<String> getPremiumToppingsList() {
@@ -85,7 +102,7 @@ public class Sandwich {
     }
 
     public void setPremiumToppingsList(List<String> premiumToppingsList) {
-        this.premiumToppingsList = premiumToppingsList;
+        Sandwich.premiumToppingsList = premiumToppingsList;
     }
 
     public static String getBreadType() {
@@ -93,6 +110,23 @@ public class Sandwich {
     }
 
     public void setBreadType(String breadType) {
-        this.breadType = breadType;
+        Sandwich.breadType = breadType;
     }
-}
+
+     public static boolean isToasted() {
+         return toasted;
+     }
+
+     public static void setToasted(boolean toasted) {
+         Sandwich.toasted = toasted;
+     }
+
+     public static List<Sandwich> getSandwichList() {
+         return sandwichList;
+     }
+
+     public static void setSandwichList(List<Sandwich> sandwichList) {
+         Sandwich.sandwichList = sandwichList;
+     }
+
+ }
