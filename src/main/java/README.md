@@ -3,7 +3,7 @@
 
 ## Project Description
 I had a lot of fun creating this project because I grew up working in 
-a Subway Sandwiches shop since I was a young teen. This Sandwich ordering system prompts user with the option to start an order when they first run it. Then the system is very straightforwatrd from there. We can add a sandwich to the order by selecting '1'. From there the system asks the user questions in order to customize their order. 
+a Subway Sandwiches shop since I was a young teen. This Sandwich ordering system prompts user with the option to start an order when they first run it. Then the system is very straight forward from there. We can add a sandwich to the order by selecting '1'. From there the system asks the user questions in order to customize their order. 
 After the user has choosen their special sandwich, user is able to checkout and confirm, which then saves the order receipt in the orders.txt file. 
 
 ## Features: 
