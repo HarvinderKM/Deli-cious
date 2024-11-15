@@ -25,6 +25,8 @@ public static void checkout() throws IOException {
 }
 
 public static void cancelOrder(){
+    OrderScreen.orderList.clear();
+    System.out.println(OrderScreen.orderList);
 
 }
 }

@@ -1,8 +1,7 @@
-import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.List;
  //create constructor, getters, setters
-public class Sandwich extends Order { //inherits from order class (extends)
+public class Sandwich { //inherits from order class (extends)
     private  int size;
     private  List<String>regularToppingsList; //string array list for regular toppings
     private  List<String>premiumToppingsList; // string array list for premium toppings

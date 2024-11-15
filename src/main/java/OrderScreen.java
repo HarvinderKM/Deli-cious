@@ -39,6 +39,7 @@ public static void orderScreen () throws IOException {
                 break;
             case "5":
                 System.out.println("Canceled Order"); //cancelled Order
+                CheckoutScreen.cancelOrder();
                 System.out.println("\n(1)Add Sandwich\n(2)Add Drink\n(3)Add Chips\n(4)Checkout\n(5)Cancel Order\n(0)Go Back");
                 break;
             case "0":
