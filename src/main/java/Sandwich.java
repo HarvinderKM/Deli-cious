@@ -25,15 +25,15 @@ public class Sandwich { //inherits from order class (extends)
      public static List<String> customerRegularToppings = new ArrayList();
      public static List<String> customerPremiumToppings = new ArrayList();
      public static void addSandwich(){
-        System.out.println("Sandwich size options: 4in, 8in, or 12in");
+        System.out.println("Choose a Sandwich size: 4in, 8in, or 12in \nEnter a #:");
         int size = Integer.parseInt(OrderScreen.getAnswer("size: "));
         System.out.println(size);
 
-        System.out.println("Sandwich bread options: white, rye, wheat, or a wrap");
+        System.out.println("Choose your Sandwich bread option: white, rye, wheat, or a wrap \nType the bread");
         String bread = OrderScreen.getAnswer("bread: ");
         System.out.println(bread);
 
-        System.out.println("Protein options: Steak, ham, Salami, roast beef, chicken, bacon");
+        System.out.println("Choose your Protein options: Steak, ham, Salami, roast beef, chicken, bacon \nType the protein\n(No meat? click 'space' + 'enter;)");
         for (int i = 1;i < 5; i++){ //can ask for up to 6 meats if they want
             String meat = OrderScreen.getAnswer("meat: ");
             if (!meat.isEmpty() && !meat.equalsIgnoreCase("no")&& !meat.equals(" ")){
@@ -43,7 +43,7 @@ public class Sandwich { //inherits from order class (extends)
             break;
             }
         }
-        System.out.println("Cheese Options: American, provolone, cheddar, or swiss");
+        System.out.println("Choose your Cheese Options: American, provolone, cheddar, or swiss");
         for (int i = 1;i < 4; i++){ //can ask for up to 3 cheeses if they want
             String cheese = OrderScreen.getAnswer("cheese: ");
             if (!cheese.isEmpty() && !cheese.equalsIgnoreCase("no")&& !cheese.equals(" ")){
@@ -54,7 +54,7 @@ public class Sandwich { //inherits from order class (extends)
             }
         }
 
-        System.out.println("Regular toppings: lettuce, peppers, onions, tomatoes, jalepenos, cucumbers, pickles, guacamole, and mushrooms");
+        System.out.println("Choose Your Toppings!\nRegular toppings: lettuce, peppers, onions, tomatoes, jalapenos, cucumbers, pickles, guacamole, and mushrooms");
         for (int i = 1;i < 9; i++){ //can ask for up to 9 toppings if they want
             String regularToppings = OrderScreen.getAnswer("regular toppings: ");
             if (!regularToppings.isEmpty() && !regularToppings.equalsIgnoreCase("no")&& !regularToppings.equals(" ")){

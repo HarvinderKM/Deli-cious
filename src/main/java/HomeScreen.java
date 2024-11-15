@@ -6,7 +6,7 @@ public class HomeScreen {
     // 1) New Order
     // 2) Exit
     public static void main(String[] args) throws IOException {
-        System.out.println("(1) New Order \n(0) exit");
+        System.out.println("Welcome to MySubs! \nHow can we help you? \n(1) New Order \n(0) exit \nEnter a # below");
         do {
            // String answer = getAnswer("--> "); //call getanswer method and put in arrow to type,
             switch (getAnswer("--> ")){
