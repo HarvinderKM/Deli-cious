@@ -6,6 +6,8 @@ import java.util.List;
 public class CheckoutScreen {
    // Confirm - create the receipt file and go back to the home screen
    // o Cancel - delete order and go back to the home screen
+
+    //Osmig helped me with this method
 public static void checkout() throws IOException {
     for (int i = 0; i < OrderScreen.orderList.size();i++){
         System.out.println(OrderScreen.orderList.get(i));

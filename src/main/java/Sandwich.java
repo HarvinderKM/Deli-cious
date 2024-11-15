@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
+
  //create constructor, getters, setters
 public class Sandwich { //inherits from order class (extends)
     private  int size;
@@ -21,7 +22,7 @@ public class Sandwich { //inherits from order class (extends)
          this.breadType = bread;
          this.toasted = toasted;
      }
-
+//Osmig helped me with the addSandwich Method
      public static List<String> customerRegularToppings = new ArrayList();
      public static List<String> customerPremiumToppings = new ArrayList();
      public static void addSandwich(){
@@ -33,7 +34,8 @@ public class Sandwich { //inherits from order class (extends)
         String bread = OrderScreen.getAnswer("bread: ");
         System.out.println(bread);
 
-        System.out.println("Choose your Protein options: Steak, ham, Salami, roast beef, chicken, bacon \nType the protein\n(No meat? click 'space' + 'enter;)");
+        System.out.println("Choose your Protein options: Steak, ham, Salami, roast beef, chicken, bacon " +
+                "\nType the protein\n(No meat? click 'space' + 'enter;)");
         for (int i = 1;i < 5; i++){ //can ask for up to 6 meats if they want
             String meat = OrderScreen.getAnswer("meat: ");
             if (!meat.isEmpty() && !meat.equalsIgnoreCase("no")&& !meat.equals(" ")){
@@ -54,7 +56,8 @@ public class Sandwich { //inherits from order class (extends)
             }
         }
 
-        System.out.println("Choose Your Toppings!\nRegular toppings: lettuce, peppers, onions, tomatoes, jalapenos, cucumbers, pickles, guacamole, and mushrooms");
+        System.out.println("Choose Your Toppings!\nRegular toppings: lettuce, peppers, onions, tomatoes, jalapenos, " +
+                "cucumbers, pickles, guacamole, and mushrooms");
         for (int i = 1;i < 9; i++){ //can ask for up to 9 toppings if they want
             String regularToppings = OrderScreen.getAnswer("regular toppings: ");
             if (!regularToppings.isEmpty() && !regularToppings.equalsIgnoreCase("no")&& !regularToppings.equals(" ")){
