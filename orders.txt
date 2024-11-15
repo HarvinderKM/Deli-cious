@@ -1,5 +1,2 @@
-[[Sandwich{size=4, regularToppingsList=[Lettuce, Peppers, Mayo], premiumToppingsList=[ham, steak, chicken, American], toasted=true, breadType='white'}]]total: 4.0
-[[Sandwich{size=4, regularToppingsList=[Lettuce, Peppers, Mayo], premiumToppingsList=[ham, steak, chicken, American], toasted=true, breadType='white'}]]total: 4.0
-[[Sandwich{size=4, regularToppingsList=[Lettuce, Peppers, Mayo], premiumToppingsList=[ham, steak, chicken, American], toasted=true, breadType='white'}], [DrinkScreen{size='M', flavor='origional'}]]total: 6.5
-[[Sandwich{size=4, regularToppingsList=[Lettuce, Peppers, Mayo], premiumToppingsList=[ham, steak, chicken, American], toasted=true, breadType='white'}], [DrinkScreen{size='M', flavor='origional'}]]total: 6.5
-[[Sandwich{size=8, regularToppingsList=[Lettuce, peppers, Ketchup], premiumToppingsList=[American], toasted=true, breadType='wheat'}]]total: 0.0
+[[Sandwich{size=8, regularToppingsList=[Lettuce, Peppers, onions, Mayo], premiumToppingsList=[roast beef, American], toasted=true, breadType='rye'}]]total: 4.0
+[[Sandwich{size=8, regularToppingsList=[Lettuce, Peppers, onions, Mayo], premiumToppingsList=[roast beef, American], toasted=true, breadType='rye'}], [DrinkScreen{size='M', flavor='origional'}]]total: 6.5

@@ -20,8 +20,11 @@ Switch statments were an important aspect of my code; Here is a snippet of it be
 ![Screenshot 2024-11-15 at 7.09.31 AM.png](Screenshot%202024-11-15%20at%207.09.31%E2%80%AFAM.png)
 
 # Running the Code:
-
+![Screenshot 2024-11-15 at 8.41.47 AM.png](Screenshot%202024-11-15%20at%208.41.47%E2%80%AFAM.png)
+![Screenshot 2024-11-15 at 8.43.19 AM.png](Screenshot%202024-11-15%20at%208.43.19%E2%80%AFAM.png)
 ## Adding a drink: 
 ![Screenshot 2024-11-15 at 7.16.07 AM.png](Screenshot%202024-11-15%20at%207.16.07%E2%80%AFAM.png)
 ![Screenshot 2024-11-15 at 7.16.58 AM.png](Screenshot%202024-11-15%20at%207.16.58%E2%80%AFAM.png)
 ![Screenshot 2024-11-15 at 7.17.30 AM.png](Screenshot%202024-11-15%20at%207.17.30%E2%80%AFAM.png)
+
+
