@@ -1,1 +1,0 @@
-[[Sandwich{size=4, regularToppingsList=[onions, Mayo], premiumToppingsList=[ham, cheddar], toasted=true, breadType='rye'}], [DrinkScreen{size='M', flavor='origional'}], [ChipsScreen{flavor='Cool Ranch', name='Doritos'}]]total: 7.5
